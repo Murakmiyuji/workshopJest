@@ -17,8 +17,8 @@
 
     // Other Outputs
     "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    "declaration": false,
+    "declarationMap": false,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
@@ -40,5 +40,9 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+    "allowJs": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.js"],
+  "exclude": ["node_modules"]
 }
