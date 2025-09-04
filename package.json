@@ -1,0 +1,23 @@
+{
+  "name": "workshopjest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Murakmiyuji/workshopJest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Murakmiyuji/workshopJest/issues"
+  },
+  "homepage": "https://github.com/Murakmiyuji/workshopJest#readme",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
