@@ -101,3 +101,7 @@ lib/
 # Lock files (manter apenas um)
 # package-lock.json  # descomente se usar yarn
 # yarn.lock          # descomente se usar npm
+
+/src/generated/prisma
+
+/src/generated/prisma
