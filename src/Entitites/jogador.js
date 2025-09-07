@@ -30,3 +30,4 @@ class Jogador {
 }
 
 export default Jogador;
+

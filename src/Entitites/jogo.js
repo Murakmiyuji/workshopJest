@@ -5,8 +5,17 @@ class Jogo {
         }
         this.jogadores = jogadores;
         this.vencedor = null;
+        this.finalizado = false;
     }
-
+    atualizarPontuacao(jogador, pontos) {
+        if (!this.jogadores.includes(jogador)) {
+            throw new Error("O jogador deve fazer parte da partida");
+        }
+        if (pontos < 0) {
+            throw new Error("Não é permitido adicionar pontos negativos");
+        }
+        jogador.adicionaPontos(pontos);
+    }
     getJogadores() {
         return this.jogadores;
     }
