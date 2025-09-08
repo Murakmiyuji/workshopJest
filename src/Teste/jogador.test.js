@@ -21,6 +21,7 @@ describe("Classe Jogador", () => {
     expect(() => {
       jogador.adicionaPontos(-5);
     }).toThrow("Proibido adicionar pontos negativos");
+    expect(jogador.getPontos()).toBe(0);
   });
 
   test("Resetar pontos volta para 0", () => {
@@ -38,7 +39,7 @@ describe("Classe Jogador", () => {
   });
 
   test("deve iniciar com zero cartões amarelos por padrão", () => {
-    const time = new Jogador({ nome: "São Paulo", idade: 110, time: "SP", cartoesAmarelos: 0});
+    const time = new Jogador({ nome: "São Paulo", idade: 110, time: "SP"});
     expect(time.getCartoesAmarelos()).toBe(0);
   });
 
