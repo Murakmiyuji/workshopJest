@@ -39,8 +39,24 @@ describe("Classe Jogador", () => {
   });
 
   test("deve iniciar com zero cartões amarelos por padrão", () => {
-    const time = new Jogador({ nome: "São Paulo", idade: 110, time: "SP"});
+    const time = new Jogador({ nome: "São Paulo", idade: 110, time: "SP" });
     expect(time.getCartoesAmarelos()).toBe(0);
+  });
+
+
+  test("Deve Adicionar Cartão Amarelo para o Jogador", () => {
+    const jogador = new Jogador({ nome: "Vinícius Júnior", idade: 25, time: "São Paulo" });
+    jogador.adicionarCartaoAmarelo();
+    expect(jogador.getCartoesAmarelos()).toBe(1);
+  });
+  test("Não deve permitir jogador com cartões amarelos negativos", () => {
+    expect(() => new Jogador({ nome: "Yuji", idade: 25, time: "Time A", cartoesAmarelos: -1 }))
+      .toThrow("Cartões amarelos são obrigatórios e devem ser um número maior ou igual a zero.");
+  });
+
+  test("Não deve permitir jogador com cartões amarelos não numéricos", () => {
+    expect(() => new Jogador({ nome: "Yuji", idade: 25, time: "Time A", cartoesAmarelos: "dois" }))
+      .toThrow("Cartões amarelos são obrigatórios e devem ser um número maior ou igual a zero.");
   });
 
 });
